@@ -87,6 +87,7 @@ export default class Navbar {
                 pageComponent.afterRender();
             }
         }
+        window.scrollTo(0, 0);
     }
     
     updateActiveLink(hash) {
