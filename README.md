@@ -4,7 +4,7 @@ Este é um modelo baixado do Replit, achei ele bonito e na brach modular e seus 
 alterando a estrtura interna, alterando assim o html principal e criando classes javascript para reaproveiamento de código e deixando-o mais modular.
 abaixo deixo a referencia do autor primario as mudanças serão aplicadas e mbranches separadas.
 
-# brach 1 [ 1ª evolução ](https://github.com/faustinopsy/portifolio_modelo)
+# brach 1 [ 1ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/1-modular-js-class)
 ++ virão mais melhorias como mais separação dos componentes em componentes menores
 
 ## Run this website
