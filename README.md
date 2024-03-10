@@ -4,6 +4,8 @@ Este é um modelo baixado do Replit, achei ele bonito e na brach modular e seus 
 alterando a estrtura interna, alterando assim o html principal e criando classes javascript para reaproveiamento de código e deixando-o mais modular.
 abaixo deixo a referencia do autor primario as mudanças serão aplicadas e mbranches separadas.
 
+1ª Branche -->>  1-modular-js-class
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
