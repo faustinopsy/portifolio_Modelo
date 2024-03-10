@@ -1,4 +1,4 @@
-import TestimonialsModal from './TestimonialsModal.js';
+import TestimonialsModal from '../components/TestimonialsModal.js';
 export default class About {
     constructor() {
         this.testimonialsModal = null;

@@ -1,9 +1,9 @@
-import Sidebar from './Sidebar.js';
-import Resume from './Resume.js';
-import Contact from './Contact.js';
-import Portifolio from './Portifolio.js';
-import Blog from './Blog.js';
-import About from './About.js';
+import About from './paginas/About.js';
+import Blog from './paginas/Blog.js';
+import Contact from './paginas/Contact.js';
+import Portifolio from './paginas/Portifolio.js';
+import Resume from './paginas/Resume.js';
+import Sidebar from './paginas/Sidebar.js';
 
 export default class Navbar {
     constructor() {
@@ -51,7 +51,6 @@ export default class Navbar {
                     <button class="navbar-link" data-nav-link>Contact</button>
                 </li>
             </ul>`
-        
     }
     
     navigator(url='') {

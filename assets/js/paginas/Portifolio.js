@@ -1,4 +1,4 @@
-import CustomSelect from './CustomSelect.js';
+import CustomSelect from '../components/CustomSelect.js';
 export default class Portifolio {
     constructor() {
         this.customSelect= null;
