@@ -7,6 +7,12 @@ abaixo deixo a referencia do autor primario as mudanças serão aplicadas e mbra
 # brach 1 [ 1ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/1-modular-js-class)
 ++ virão mais melhorias como mais separação dos componentes em componentes menores
 
+# brach 2 [ 2ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/2-modular-sections)
+++ foi separado as section do html em componentes sepados
+
+# brach 3 [ 3ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/3-decomponto-sections)
+++ foi separado partes que faziam parte das section, deixando os componetes ainda menores
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
