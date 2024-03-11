@@ -7,7 +7,8 @@ export default class Contact {
       this.sectionContactForm = new SectionContactForm();
       this.sectionMapbox = new SectionMapbox()
     }
-    
+    afterRender(){
+    }
     render(){
         return `
         ${this.header.render()}

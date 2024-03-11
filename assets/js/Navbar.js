@@ -59,7 +59,7 @@ export default class Navbar {
         this.updateActiveLink(hash);
     }
     
-    updatePageContent(hash) {
+    async updatePageContent(hash) {
         let pageComponent;
         switch(hash) {
             case 'contact': 
@@ -82,10 +82,9 @@ export default class Navbar {
         
         const pageContent = document.querySelector(`.${hash}`);
         if(pageContent) {
-            pageContent.innerHTML = pageComponent.render();
-            if (typeof pageComponent.afterRender === "function") {
+            pageContent.innerHTML = await pageComponent.render();
                 pageComponent.afterRender();
-            }
+            
         }
         window.scrollTo(0, 0);
     }

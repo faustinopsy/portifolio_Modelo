@@ -16,13 +16,15 @@ export default class About {
     afterRender(){
         this.testimonialsModal = new TestimonialsModal();
     }
-    render(){
+    async render(){
+        const clientsSection = await this.sectionClients.renderAsync();
+        const sectionService = await this.sectionService.renderAsync();
         return `
             ${this.header.render()}
             ${this.sectionAbout.render()}
-            ${this.sectionService.render()}
+            ${sectionService}
             ${this.sectionTestimonials.render()}
-            ${this.sectionClients.render()}
+            ${clientsSection}
     
         `;
     }

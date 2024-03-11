@@ -1,0 +1,32 @@
+[
+  {
+      "imageSrc": "./assets/images/logo-1-color.png",
+      "altText": "client logo",
+      "link": "#link1"
+  },
+  {
+      "imageSrc": "./assets/images/logo-2-color.png",
+      "altText": "client logo",
+      "link": "#link2"
+  },
+  {
+      "imageSrc": "./assets/images/logo-3-color.png",
+      "altText": "client logo",
+      "link": "#link3"
+  },
+  {
+      "imageSrc": "./assets/images/logo-4-color.png",
+      "altText": "client logo",
+      "link": "#link4"
+  },
+  {
+      "imageSrc": "./assets/images/logo-5-color.png",
+      "altText": "client logo",
+      "link": "#link5"
+  },
+  {
+      "imageSrc": "./assets/images/logo-6-color.png",
+      "altText": "client logo",
+      "link": "#link6"
+  }
+]

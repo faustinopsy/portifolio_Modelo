@@ -7,12 +7,15 @@ export default class Resume {
     this.sectionTimeline = new SectionTimeline();
     this.sectionSkill = new SectionSkill();
   }
-
-    render(){
+  afterRender(){
+  }
+    async render(){
+      const sectionService = await this.sectionSkill.renderAsync();
+      const sectionTimeline= await this.sectionTimeline.renderAsync();
         return `
         ${this.header.render()}
-        ${this.sectionTimeline.render()}
-        ${this.sectionSkill.render()}
+        ${sectionTimeline}
+        ${sectionService}
         `;
     }
 }

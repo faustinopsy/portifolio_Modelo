@@ -1,0 +1,23 @@
+ [
+    {
+      "name": "Web design",
+      "percentage": 80,
+      "progressBarWidth": "80%"
+    },
+    {
+      "name": "Graphic design",
+      "percentage": 70,
+      "progressBarWidth": "70%"
+    },
+    {
+      "name": "Branding",
+      "percentage": 90,
+      "progressBarWidth": "90%"
+    },
+    {
+      "name": "WordPress",
+      "percentage": 50,
+      "progressBarWidth": "50%"
+    }
+  ]
+

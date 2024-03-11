@@ -1,4 +1,3 @@
-import CustomSelect from '../components/CustomSelect.js';
 import Header from '../components/Header.js';
 import SectionProjects from '../components/section/SectionProjects.js';
 export default class Portifolio {
@@ -8,12 +7,12 @@ export default class Portifolio {
         this.sectionProjects = new SectionProjects();
     }
     afterRender(){
-      this.customSelect = new CustomSelect();
     }
-    render(){
+    async render() {
+        const resultado = await this.sectionProjects.renderAsync();
         return `
-        ${this.header.render()}
-        ${this.sectionProjects.render()}
+          ${this.header.render()}
+          ${resultado}
         `;
-    }
+      }
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Finance",
+    "imageSrc": "./assets/images/project-1.jpg",
+    "altText": "finance",
+    "category": "Web development"
+  },
+  {
+    "title": "Orizon",
+    "imageSrc": "./assets/images/project-2.png",
+    "altText": "orizon",
+    "category": "Web development"
+  },
+  {
+    "title": "Fundo",
+    "imageSrc": "./assets/images/project-3.jpg",
+    "altText": "fundo",
+    "category": "Web design"
+  },
+  {
+    "title": "Brawlhalla",
+    "imageSrc": "./assets/images/project-4.png",
+    "altText": "brawlhalla",
+    "category": "Applications"
+  },
+  {
+    "title": "DSM.",
+    "imageSrc": "./assets/images/project-5.png",
+    "altText": "dsm",
+    "category": "Web design"
+  },
+  {
+    "title": "MetaSpark",
+    "imageSrc": "./assets/images/project-6.png",
+    "altText": "metaspark",
+    "category": "Web design"
+  },
+  {
+    "title": "Summary",
+    "imageSrc": "./assets/images/project-7.png",
+    "altText": "summary",
+    "category": "Web development"
+  },
+  {
+    "title": "Task Manager",
+    "imageSrc": "./assets/images/project-8.jpg",
+    "altText": "task manager",
+    "category": "Applications"
+  },
+  {
+    "title": "Arrival",
+    "imageSrc": "./assets/images/project-9.png",
+    "altText": "arrival",
+    "category": "Web development"
+  }
+]
