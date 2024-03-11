@@ -3,6 +3,10 @@
 Este é um modelo baixado do Replit, achei ele bonito e na brach modular e seus galhos pretendo modularizar
 alterando a estrutura interna, alterando assim o html principal e criando classes javascript para reaproveitamento de código e deixando-o mais modular, e intenção será deixa cada parte do projeto o mais separado possível.
 abaixo deixo a referência do autor primário,  as mudanças serão feitas por mim e aplicadas em branches separadas.
+alterando a estrutura interna, alterando assim o html principal e criando classes javascript para reaproveitamento de código e deixando-o mais modular, e intenção será deixa cada parte do projeto o mais separado possível.
+abaixo deixo a referência do autor primário,  as mudanças serão feitas por mim e aplicadas em branches separadas.
+
+o layout das do projeot inicial continuará intacto, a melhorias será apenas na estrutura interna, separando cada parte em componentes menores, o que melhora a organização e reaproveitamento aparti da 2ª evolução já percebe a estrutura diferente.
 
 o layout das do projeot inicial continuará intacto, a melhorias será apenas na estrutura interna, separando cada parte em componentes menores, o que melhora a organização e reaproveitamento aparti da 2ª evolução já percebe a estrutura diferente.
 
