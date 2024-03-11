@@ -15,6 +15,9 @@ o layout das do projeot inicial continuará intacto, a melhorias será apenas na
 # brach 3 [ 3ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/3-decomponto-sections)
 ++ foi separado partes que faziam parte das section, deixando os componetes ainda menores
 
+# brach 4 [ 4ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/4-decompondo-navbar-menu-json)
+++ foi separado os link do navbar para um json, decompondo as futuras alterações não mais na navbar, ao adicionar novos menus ou remover podem ser feitos no json, assim poderá carregar de um backend caso haja necessidade trocando a url do json
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
@@ -28,3 +31,4 @@ This template has been developed by [@codewithsadee](https://www.twitter.com/cod
 Donations: [Patreon](https://patreon.com/codewithsadee).
 
 License: MIT (see LICENSE file).
+
