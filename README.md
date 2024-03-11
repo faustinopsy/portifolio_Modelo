@@ -10,10 +10,12 @@ o layout das branchs continuam intactos, a melhorias aconteceram na estrutura in
 ++ virão mais melhorias como mais separação dos componentes em componentes menores
 
 # brach 2 [ 2ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/2-modular-sections)
-++ foi separado as section do html em componentes sepados
+++ foi separado as section do html em componentes menores
+html -> paginas ->sections
 
 # brach 3 [ 3ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/3-decomponto-sections)
-++ foi separado partes que faziam parte das section, deixando os componetes ainda menores
+++ foi separado partes das section, deixando os componetes ainda menores
+html -> paginas ->sections -> partes da sections
 
 ## Run this website
 
