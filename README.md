@@ -15,6 +15,9 @@ o layout das branchs continuam intactos, a melhorias aconteceram na estrutura in
 # brach 3 [ 3ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/3-decomponto-sections)
 ++ foi separado partes que faziam parte das section, deixando os componetes ainda menores
 
+# brach 4 [ 4ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/4-decompondo-navbar-menu-json)
+++ foi separado os link do navbar para um json, decompondo as futuras alterações não mais na navbar, ao adicionar novos menus ou remover podem ser feitos no json, assim poderá carregar de um backend caso haja necessidade trocando a url do json
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
