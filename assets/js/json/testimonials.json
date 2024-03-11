@@ -1,0 +1,27 @@
+[
+    {
+      "id": "1",
+      "avatar": "./assets/images/avatar-1.png",
+      "name": "Daniel Lewis",
+      "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "id": "2",
+      "avatar": "./assets/images/avatar-2.png",
+      "name": "Jessica Miller",
+      "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "id": "3",
+      "avatar": "./assets/images/avatar-3.png",
+      "name": "Emily Evans",
+      "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "id": "4",
+      "avatar": "./assets/images/avatar-4.png",
+      "name": "Henry William",
+      "testimonial": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    }
+  ]
+

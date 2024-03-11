@@ -3,7 +3,7 @@ import SectionAbout from '../components/section/SectionAbout.js';
 import SectionClients from '../components/section/SectionClients.js';
 import SectionService from '../components/section/SectionService.js';
 import SectionTestimonials from '../components/section/SectionTestimonials.js';
-import TestimonialsModal from '../components/TestimonialsModal.js';
+import TestimonialsModal from '../components/modal/TestimonialsModal.js';
 export default class About {
     constructor() {
         this.testimonialsModal = null;
@@ -19,11 +19,12 @@ export default class About {
     async render(){
         const clientsSection = await this.sectionClients.renderAsync();
         const sectionService = await this.sectionService.renderAsync();
+        const sectionTestimonials = await this.sectionTestimonials.renderAsync();
         return `
             ${this.header.render()}
             ${this.sectionAbout.render()}
             ${sectionService}
-            ${this.sectionTestimonials.render()}
+            ${sectionTestimonials}
             ${clientsSection}
     
         `;
