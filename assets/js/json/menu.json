@@ -1,0 +1,27 @@
+[
+    {
+        "name": "About",
+        "hash": "about",
+        "componentPath": "./paginas/About.js"
+    },
+    {
+        "name": "Blog",
+        "hash": "blog",
+        "componentPath": "./paginas/Blog.js"
+    },
+    {   "name": "Resume", 
+        "hash": "resume" ,
+        "componentPath": "./paginas/Resume.js"
+    },
+    {   
+        "name": "Portfolio",
+        "hash": "portfolio" ,
+        "componentPath": "./paginas/Portfolio.js"
+    },
+    {   
+        "name": "Contact", 
+        "hash": "contact" ,
+        "componentPath": "./paginas/Contact.js"
+    }
+  ]
+  

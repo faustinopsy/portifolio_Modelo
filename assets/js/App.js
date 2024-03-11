@@ -5,8 +5,9 @@ class App{
         this.Navbar = new Navbar();
         this.init()
     }
-    init(){
+    async init(){
         const nav = document.getElementById("nav");
+        await this.Navbar.loadMenu();
         nav.innerHTML = this.Navbar.render();
         this.Navbar.afterRender();
         this.Navbar.navigator();

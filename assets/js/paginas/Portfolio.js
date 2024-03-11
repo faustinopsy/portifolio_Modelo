@@ -1,6 +1,6 @@
 import Header from '../components/Header.js';
 import SectionProjects from '../components/section/SectionProjects.js';
-export default class Portifolio {
+export default class Portfolio {
     constructor() {
         this.customSelect= null;
         this.header = new Header('Portifolio');

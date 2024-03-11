@@ -1,21 +1,15 @@
-import About from './paginas/About.js';
-import Blog from './paginas/Blog.js';
-import Contact from './paginas/Contact.js';
-import Portifolio from './paginas/Portifolio.js';
-import Resume from './paginas/Resume.js';
 import Sidebar from './paginas/Sidebar.js';
-
+import FetchData from './components/lib/FetchData.js';
 export default class Navbar {
     constructor() {
-      
-      this.contact = null;
-      this.resume = null;
-      this.blog = null;
-      this.about = null;
-      this.portifolio = null;
       this.sidebar = null;
+      this.menu = [];
+      this.url = './assets/js/json/menu.json';
       window.addEventListener("hashchange", () => this.navigator(location.hash));
     }
+    async loadMenu() {
+        this.menu = await FetchData.getJSON(this.url);
+      }
     async afterRender(){
         this.sidebar = new Sidebar();
         const sidebar = document.querySelector(".sidebar");
@@ -32,63 +26,48 @@ export default class Navbar {
         });
     }
     render(){
+        const navLinksHtml = this.menu.map(link => `
+            <li class="navbar-item">
+                <button class="navbar-link" data-nav-link data-target="${link.hash}">${link.name}</button>
+            </li>
+        `).join('');
         
         return `
             <ul class="navbar-list">
-                <li class="navbar-item">
-                    <button class="navbar-link  active" data-nav-link>About</button>
-                </li>
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Resume</button>
-                </li>
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Portfolio</button>
-                </li>
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Blog</button>
-                </li>
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Contact</button>
-                </li>
-            </ul>`
+                ${navLinksHtml}
+            </ul>
+        `;
+        
     }
     
+    async updatePageContent(hash) {
+        const menuItem = this.menu.find(item => item.hash === hash);
+      
+        if (menuItem && menuItem.componentPath) {
+          try {
+            const module = await import(menuItem.componentPath);
+            const ComponentClass = module.default;
+            const pageComponent = new ComponentClass();
+      
+            const pageContent = document.querySelector(`.${hash}`);
+            if (pageContent) {
+              pageContent.innerHTML = await pageComponent.render();
+              if (typeof pageComponent.afterRender === "function") {
+                pageComponent.afterRender();
+              }
+            }
+            window.scrollTo(0, 0);
+          } catch (error) {
+            console.error("Failed to load page component:", error);
+          }
+        }
+      }
+      
     navigator(url='') {
         const hash = url.substring(1) || 'about';
         this.updatePageContent(hash);
         this.updateActiveLink(hash);
     }
-    
-    async updatePageContent(hash) {
-        let pageComponent;
-        switch(hash) {
-            case 'contact': 
-                pageComponent = new Contact();
-                break;
-            case 'portfolio': 
-                pageComponent = new Portifolio();
-                break;
-            case 'resume': 
-                pageComponent = new Resume();
-                break;
-            case 'blog': 
-                pageComponent = new Blog();
-                break;
-            case 'about': 
-            default: 
-                pageComponent = new About();
-                break;
-        }
-        
-        const pageContent = document.querySelector(`.${hash}`);
-        if(pageContent) {
-            pageContent.innerHTML = await pageComponent.render();
-                pageComponent.afterRender();
-            
-        }
-        window.scrollTo(0, 0);
-    }
-    
     updateActiveLink(hash) {
         const navigationLinks = document.querySelectorAll("[data-nav-link]");
         const pages = document.querySelectorAll("[data-page]");
