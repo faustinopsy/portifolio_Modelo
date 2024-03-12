@@ -8,6 +8,7 @@ class Configuracoes {
   
     loadStyles() {
       const styles = [
+        { id: 'modal-styles', href: './assets/css/modal.css' },
         { id: 'floatButtom-styles', href: './assets/css/floatButtom.css' },
       ];
       styles.forEach(style => {
@@ -43,6 +44,10 @@ class Configuracoes {
                     <option value="'Times New Roman', serif">Times New Roman</option>
                     <option value="'Courier New', monospace">Courier New</option>
                 </select>
+              </div>
+              <div>
+                <label for="font-size" class="service-item-text">Tamanho da Fonte:<span id="font-size-value">12</span></label>
+                <input type="range" id="font-size" name="font-size" min="12" max="33" value="12">
               </div>
               <div>
                 <label for="background-color" class="service-item-text">Cor de Fundo:</label>
@@ -81,11 +86,18 @@ class Configuracoes {
         const settings = {
           primaryColor: document.getElementById('primary-color').value,
           fontFamily: document.getElementById('font-family').value,
+          fontSize: document.getElementById('font-size').value,
           shadowIntensity: document.getElementById('shadow-intensity').value,
           backgroundColor: document.getElementById('background-color').value,
           backgroundPainel: document.getElementById('background-painel').value
         };
         
+        const fontSizeInput = document.getElementById('font-size');
+        const fontSizeValue = document.getElementById('font-size-value');
+        fontSizeInput.addEventListener('input', function() {
+            fontSizeValue.textContent = this.value;
+            document.documentElement.style.setProperty('--fs-6', `${this.value}px`);
+        });
         this.aplicarConfig(settings);
         this.saveConfig(settings); 
       });
@@ -97,6 +109,8 @@ class Configuracoes {
         document.documentElement.style.setProperty('--smoky-black', settings.backgroundColor);
         document.documentElement.style.setProperty('--eerie-black-2', settings.backgroundPainel);
     
+        const fontSize = `${settings.fontSize}px`;
+        document.documentElement.style.setProperty('--fs-6', `${fontSize}`);
         document.getElementById('config-modal').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
       }
@@ -108,6 +122,7 @@ class Configuracoes {
         if (settings) {
           document.getElementById('primary-color').value = settings.primaryColor;
           document.getElementById('font-family').value = settings.fontFamily;
+          document.getElementById('font-size').value = settings.fontSize;
           document.getElementById('shadow-intensity').value = settings.shadowIntensity;
           document.getElementById('background-color').value = settings.backgroundColor;
           document.getElementById('background-painel').value = settings.backgroundPainel;

@@ -6,6 +6,7 @@ export default class Navbar {
       this.menu = [];
       this.url = './assets/js/json/menu.json';
       window.addEventListener("hashchange", () => this.navigator(location.hash));
+      
     }
     async loadMenu() {
         this.menu = await FetchData.getJSON(this.url);
@@ -65,7 +66,8 @@ export default class Navbar {
       }
       
     navigator(url='') {
-        const hash = url.substring(1) || 'about';
+        const defaultUrl = location.hash;
+        const hash = url.substring(1) || defaultUrl.substring(1);
         this.updatePageContent(hash);
         this.updateActiveLink(hash);
     }
