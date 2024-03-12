@@ -4,10 +4,11 @@
     right: 20px;
     z-index: 30;
     padding: 10px 15px;
-    background-color: var(--jet);
+    background-color: var(--onyx);
     color: var(--white-1);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    opacity: 0.7;
   }
   
