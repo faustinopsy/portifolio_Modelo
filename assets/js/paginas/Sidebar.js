@@ -3,6 +3,8 @@ export default class Sidebar {
         this.sidebar = null;
         this.sidebarBtn = null;
     }
+ 
+    
     afterRender(){
       this.sidebar = document.querySelector("[data-sidebar]");
       this.sidebarBtn = document.querySelector(".info_more-btn");
@@ -11,7 +13,25 @@ export default class Sidebar {
     toggle() {
         this.sidebar.classList.toggle("active");
       }
+      loadStyles() {
+        const styles = [
+          { id: 'sidebar-styles', href: './assets/css/sidebar.css' },
+          { id: 'navbar-styles', href: './assets/css/navbar.css' },
+          { id: 'responsive-styles', href: './assets/css/responsive.css' }
+        ];
+        styles.forEach(style => {
+          if (!document.getElementById(style.id)) {
+            const link = document.createElement('link');
+            link.id = style.id;
+            link.href = style.href;
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            document.head.appendChild(link);
+          }
+        });
+      }
       render(){
+        this.loadStyles();
         return `
         <div class="sidebar-info">
         <figure class="avatar-box">

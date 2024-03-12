@@ -16,7 +16,28 @@ export default class About {
     afterRender(){
         this.testimonialsModal = new TestimonialsModal();
     }
+    loadStyles() {
+        const styles = [
+          { id: 'about-styles', href: './assets/css/about.css' },
+          { id: 'clients-styles', href: './assets/css/clients.css' },
+          { id: 'service-styles', href: './assets/css/service.css' },
+          { id: 'testemonials-styles', href: './assets/css/testemonials.css' },
+          { id: 'modal-styles', href: './assets/css/modal.css' },
+          { id: 'responsive-styles', href: './assets/css/responsive.css' }
+        ];
+        styles.forEach(style => {
+          if (!document.getElementById(style.id)) {
+            const link = document.createElement('link');
+            link.id = style.id;
+            link.href = style.href;
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            document.head.appendChild(link);
+          }
+        });
+      }
     async render(){
+        this.loadStyles();
         const clientsSection = await this.sectionClients.renderAsync();
         const sectionService = await this.sectionService.renderAsync();
         const sectionTestimonials = await this.sectionTestimonials.renderAsync();

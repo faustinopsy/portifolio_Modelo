@@ -9,7 +9,24 @@ export default class Contact {
     }
     afterRender(){
     }
+    loadStyles() {
+      const styles = [
+        { id: 'contact-styles', href: './assets/css/contact.css' },
+        { id: 'responsive-styles', href: './assets/css/responsive.css' }
+      ];
+      styles.forEach(style => {
+        if (!document.getElementById(style.id)) {
+          const link = document.createElement('link');
+          link.id = style.id;
+          link.href = style.href;
+          link.type = 'text/css';
+          link.rel = 'stylesheet';
+          document.head.appendChild(link);
+        }
+      });
+    }
     render(){
+      this.loadStyles();
         return `
         ${this.header.render()}
         ${this.sectionMapbox.render()}

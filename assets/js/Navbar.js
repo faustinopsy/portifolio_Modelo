@@ -25,6 +25,7 @@ export default class Navbar {
             });
         });
     }
+    
     render(){
         const navLinksHtml = this.menu.map(link => `
             <li class="navbar-item">
