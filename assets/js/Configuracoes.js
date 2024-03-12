@@ -24,7 +24,7 @@ class Configuracoes {
   
     render() {
       const settingsHtml = `
-        <div id="config-modal" class="modal-container">
+        <div id="config-modal" class="modal-container" hidden>
           <div class="overlay"></div>
           <div class="testimonials-modal">
             <button class="modal-close-btn">X</button>
