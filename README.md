@@ -18,6 +18,12 @@ o layout das do projeot inicial continuará intacto, a melhorias será apenas na
 # brach 4 [ 4ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/4-decompondo-navbar-menu-json)
 ++ foi separado os link do navbar para um json, decompondo as futuras alterações não mais na navbar, ao adicionar novos menus ou remover podem ser feitos no json, assim poderá carregar de um backend caso haja necessidade trocando a url do json
 
+# brach 5 [ 5ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/5-decompondo-css-modularizando)
+++ o css foi separados em partes menores para melhor configuração das partes, e configurado para carregar conforme os seus componentes
+
+# brach 6 [ 6ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/6-add-config-personalizada)
+++ foi criado um componente para adicionar um widget de configurações pessoais, alterando fonte e cores do painel e do body, esse poderá ser expandido para aumentar o tamnho de fonte e outras coisas legais
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
