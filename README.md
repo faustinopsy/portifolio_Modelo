@@ -24,6 +24,10 @@ o layout das do projeot inicial continuará intacto, a melhorias será apenas na
 # brach 6 [ 6ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/6-add-config-personalizada)
 ++ foi criado um componente para adicionar um widget de configurações pessoais, alterando fonte e cores do painel e do body, esse poderá ser expandido para aumentar o tamnho de fonte e outras coisas legais
 
+# brach 7 [ 7ª evolução ](https://github.com/faustinopsy/portifolio_Modelo/tree/7-internacionalizar-config)
+++ foi adicionada internacionalização parcial, navbar completa, resume parcial, configuração completa, falta outros componentes
+
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
