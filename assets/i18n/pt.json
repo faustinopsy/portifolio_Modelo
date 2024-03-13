@@ -1,0 +1,40 @@
+{
+    "settingsTitle": "Configurações do Tema",
+    "primaryColor": "Cor Primária",
+    "fontFamily": "Fonte",
+    "fontSize": "Tamanho da Fonte",
+    "backgroundColor": "Cor de Fundo",
+    "backgroundPanelColor": "Cor de Fundo do Painel",
+    "shadowIntensity": "Intensidade da Sombra",
+    "applyButton": "Aplicar",
+    "settingsButton": "Configurações",
+    "education": "Educação",
+    "experience": "Experiência",
+    "links": {
+      "about": "Sobre",
+      "blog": "Blog",
+      "resume": "Currículo",
+      "portfolio": "Portfólio",
+      "contact": "Contato"
+    },
+    "services": {
+      "webdesign": {
+        "title": "Design Web",
+        "description": "O design mais moderno e de alta qualidade feito em nível profissional."
+      },
+      "webdevelopment": {
+        "title": "Desenvolvimento Web",
+        "description": "Desenvolvimento de sites de alta qualidade em nível profissional."
+      },
+      "mobileapps": {
+        "title": "Aplicativos móveis",
+        "description": "Desenvolvimento profissional de aplicativos para iOS e Android."
+      },
+      "photography": {
+        "title": "Fotografia",
+        "description": "Faço fotos de alta qualidade de qualquer categoria em nível profissional."
+      }
+    }
+    
+  }
+  

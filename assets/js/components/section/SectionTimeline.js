@@ -1,12 +1,14 @@
 import FetchData from '../lib/FetchData.js';
 import ExperienceList from '../lists/ExperienceList.js';
 import EducationList from '../lists/EducationList.js';
+import Configuracoes from '../../Configuracoes.js';
 export default class SectionTimeline {
   constructor() {
     this.experience = [];
     this.education = [];
     this.urlEdu = './assets/js/json/education.json';
     this.urlXp = './assets/js/json/experience.json';
+    this.configuracoes = Configuracoes.getInstance();
   }
 
   async loadXP() {
@@ -26,7 +28,7 @@ export default class SectionTimeline {
   async render() {
     await this.loadXP();
     await this.loadEdu();
-
+    const i18n = this.configuracoes.i18n;
     const xpList = await this.renderLists(this.experience, ExperienceList);
     const eduList = await this.renderLists(this.education, EducationList);
 
@@ -36,7 +38,7 @@ export default class SectionTimeline {
           <div class="icon-box">
             <ion-icon name="book-outline"></ion-icon>
           </div>
-          <h3 class="h3">Education</h3>
+          <h3 class="h3">${i18n.education}</h3>
         </div>
         <ol class="timeline-list">${eduList}</ol>
       </section>
@@ -45,7 +47,7 @@ export default class SectionTimeline {
           <div class="icon-box">
             <ion-icon name="briefcase-outline"></ion-icon>
           </div>
-          <h3 class="h3">Experience</h3>
+          <h3 class="h3">${i18n.experience}</h3>
         </div>
         <ol class="timeline-list">${xpList}</ol>
       </section>

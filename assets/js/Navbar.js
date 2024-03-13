@@ -1,12 +1,13 @@
 import Sidebar from './paginas/Sidebar.js';
 import FetchData from './components/lib/FetchData.js';
+import Configuracoes from './Configuracoes.js';
 export default class Navbar {
     constructor() {
       this.sidebar = null;
       this.menu = [];
       this.url = './assets/js/json/menu.json';
       window.addEventListener("hashchange", () => this.navigator(location.hash));
-      
+      this.configuracoes = Configuracoes.getInstance();
     }
     async loadMenu() {
         this.menu = await FetchData.getJSON(this.url);
@@ -21,16 +22,17 @@ export default class Navbar {
         const navLinks = document.querySelectorAll("[data-nav-link]");
         navLinks.forEach(link => {
             link.addEventListener("click", (e) => {
-                const pageName = e.target.textContent.trim().toLowerCase();
-                location.hash = pageName; 
+                const targetHash = e.target.getAttribute('data-target');
+                location.hash = targetHash; 
             });
         });
     }
     
     render(){
+        const i18n = this.configuracoes.i18n.links;
         const navLinksHtml = this.menu.map(link => `
             <li class="navbar-item">
-                <button class="navbar-link" data-nav-link data-target="${link.hash}">${link.name}</button>
+                <button class="navbar-link" data-nav-link data-target="${link.hash}">${i18n[link.hash]}</button>
             </li>
         `).join('');
         

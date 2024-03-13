@@ -1,0 +1,39 @@
+{
+  "settingsTitle": "Theme Settings",
+  "primaryColor": "Primary Color",
+  "fontFamily": "Font",
+  "fontSize": "Font Size",
+  "backgroundColor": "Background Color",
+  "backgroundPanelColor": "Panel Background Color",
+  "shadowIntensity": "Shadow Intensity",
+  "applyButton": "Apply",
+  "settingsButton": "Settings",
+  "education": "Education",
+  "experience": "Experience",
+  "links": {
+    "about": "About",
+    "blog": "Blog",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "services": {
+      "webdesign": {
+        "title": "Web design",
+        "description": "The most modern and high-quality design made at a professional level."
+      },
+      "webdevelopment": {
+        "title": "Web development",
+        "description": "High-quality development of sites at the professional level."
+      },
+      "mobileapps": {
+        "title": "Mobile apps",
+        "description": "Professional development of applications for iOS and Android."
+      },
+      "photography": {
+        "title": "Photography",
+        "description": "I make high-quality photos of any category at a professional level."
+      }
+    }
+  
+}
