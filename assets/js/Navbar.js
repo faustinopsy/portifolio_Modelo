@@ -68,7 +68,7 @@ export default class Navbar {
       }
       
     navigator(url='') {
-        const defaultUrl = location.hash;
+        const defaultUrl = location.hash ? location.hash : '#about';
         const hash = url.substring(1) || defaultUrl.substring(1);
         this.updatePageContent(hash);
         this.updateActiveLink(hash);
