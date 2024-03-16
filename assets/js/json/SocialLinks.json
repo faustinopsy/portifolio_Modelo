@@ -1,0 +1,15 @@
+[
+    {
+      "icon": "fa-brands fa-facebook",
+      "url": "https://facebook.com/yourprofile"
+    },
+    {
+      "icon": "fa-brands fa-twitter",
+      "url": "https://twitter.com/yourprofile"
+    },
+    {
+      "icon": "fa-brands fa-instagram",
+      "url": "https://instagram.com/yourprofile"
+    }
+  ]
+  

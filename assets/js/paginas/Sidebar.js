@@ -1,12 +1,12 @@
-import SidebarInfo  from '../components/Sidebar/SidebarInfo.js';
-import  ContactsList  from '../components/Sidebar/ContactsList.js';
-import  SocialList  from '../components/Sidebar/SocialList.js';
+import SectionSidebarInfo  from '../components/section/SectionSidebarInfo.js';
+import  SectionSidebarContact  from '../components/section/SectionSidebarContact.js';
+import  SectionSidebarSocial  from '../components/section/SectionSidebarSocial.js';
 
 export default class Sidebar {
   constructor() {
-    this.sidebarInfo = new SidebarInfo();
-    this.contactsList = new ContactsList();
-    this.socialList = new SocialList();
+    this.sidebarInfo = new SectionSidebarInfo();
+    this.contactsList = new SectionSidebarContact();
+    this.socialList = new SectionSidebarSocial();
   }
   afterRender(){
     this.sidebar = document.querySelector("[data-sidebar]");

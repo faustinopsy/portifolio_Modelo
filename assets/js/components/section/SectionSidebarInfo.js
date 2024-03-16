@@ -1,4 +1,5 @@
 export default class SidebarInfo {
+
     render() {
       return `
         <div class="sidebar-info">
@@ -16,5 +17,6 @@ export default class SidebarInfo {
         </div>
       `;
     }
+  
   }
   
