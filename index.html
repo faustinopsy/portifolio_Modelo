@@ -8,22 +8,21 @@
   <meta name="robots" content="index, follow">
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'none';
-    script-src 'self' 'unsafe-inline';
-    img-src 'self' data:;
+    script-src 'self' 'unsafe-inline' https://unpkg.com;
+    img-src 'self' data: https://unpkg.com;
     style-src 'self' 'unsafe-inline';
-    font-src 'self';
-    connect-src 'self';
+    font-src 'self' https://unpkg.com;
+    connect-src 'self' https://unpkg.com;
     worker-src 'self';
     manifest-src 'self'; 
-    child-src 'none';
+    child-src 'self' ;
+    frame-src 'self' 'unsafe-inline' https://www.google.com;
     upgrade-insecure-requests;
     ">
   <title>vCard - Personal Portfolio</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/app.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <meta name="theme-color" content="#000000">
 	<link rel="manifest" href="./manifest.json">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
