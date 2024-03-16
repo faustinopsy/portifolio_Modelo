@@ -41,7 +41,7 @@ export default class Configuracoes {
     const modalHtml = `
       <div id="config-modal" class="modal-container" hidden>
         <div class="overlay"></div>
-        <div class="testimonials-modal">
+        <div class="testimonials-modal" style="background-color:white">
           <button class="modal-close-btn">X</button>
           <div class="modal-content" id="modal-content"></div>
         </div>
@@ -89,7 +89,7 @@ export default class Configuracoes {
       <h3>${this.i18n.settingsTitle}</h3>
       <div>
         <label for="primary-color">${this.i18n.primaryColor}:</label>
-        <input type="color" id="primary-color" name="primary-color" value="${settings.primaryColor}">
+        <input type="color" id="primary-color" name="primary-color" value="${settings ? settings.primaryColor: ''}">
       </div>
       <div>
         <label for="font-family">${this.i18n.fontFamily}:</label>
@@ -102,20 +102,20 @@ export default class Configuracoes {
         </select>
       </div>
       <div>
-        <label for="font-size">${this.i18n.fontSize}:<span id="font-size-value">${settings.fontSize}</span></label>
-        <input type="range" id="font-size" name="font-size" min="12" max="33" value="${settings.fontSize}">
+        <label for="font-size">${this.i18n.fontSize}:<span id="font-size-value">${settings ? settings.fontSize : ''}</span></label>
+        <input type="range" id="font-size" name="font-size" min="12" max="33" value="${settings ? settings.fontSize: ''}">
       </div>
       <div>
         <label for="background-color">${this.i18n.backgroundColor}:</label>
-        <input type="color" id="background-color" name="background-color" value="${settings.backgroundColor}">
+        <input type="color" id="background-color" name="background-color" value="${settings ?settings.backgroundColor: ''}">
       </div>
       <div>
         <label for="background-painel">${this.i18n.backgroundPanelColor}:</label>
-        <input type="color" id="background-painel" name="background-painel" value="${settings.backgroundPainel}">
+        <input type="color" id="background-painel" name="background-painel" value="${settings ?settings.backgroundPainel: ''}">
       </div>
       <div>
         <label for="shadow-intensity">${this.i18n.shadowIntensity}:</label>
-        <input type="range" id="shadow-intensity" name="shadow-intensity" min="0" max="25" value="${settings.shadowIntensity}">
+        <input type="range" id="shadow-intensity" name="shadow-intensity" min="0" max="25" value="${settings ?settings.shadowIntensity: ''}">
       </div>
       ${linguas}
       <button type="button" id="apply-settings">${this.i18n.applyButton}</button>
