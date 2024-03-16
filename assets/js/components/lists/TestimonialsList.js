@@ -20,7 +20,7 @@ export default class TestimonialsList {
         <div class="overlay" data-overlay></div>
         <section class="testimonials-modal">
         <button class="modal-close-btn" data-modal-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
+        <i class="fa-regular fa-circle-xmark"></i>
         </button>
         <div class="modal-img-wrapper">
             <figure class="modal-avatar-box">

@@ -13,7 +13,7 @@ export default class SectionContactForm {
             </div>
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
+            <i class="fa-regular fa-paper-plane"></i>
               <span>Send Message</span>
             </button>
           </form>

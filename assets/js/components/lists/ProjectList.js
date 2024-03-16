@@ -9,7 +9,7 @@ export default class ProjectList {
                 <a href="#">
                     <figure class="project-img">
                         <div class="project-item-icon-box">
-                            <ion-icon name="eye-outline"></ion-icon>
+                        <i class="fa-regular fa-eye"></i>
                         </div>
                         <img src="${this.project.imageSrc}" alt="${this.project.altText}" loading="lazy">
                     </figure>

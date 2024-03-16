@@ -26,7 +26,7 @@ export default class CustomSelect {
             <button class="filter-select" data-select>
               <div class="select-value" data-selecct-value>Select category</div>
               <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
+              <i class="fa-solid fa-chevron-down"></i>
               </div>
             </button>
             <ul class="select-list">

@@ -36,7 +36,7 @@ export default class SectionTimeline {
       <section class="timeline">
         <div class="title-wrapper">
           <div class="icon-box">
-            <ion-icon name="book-outline"></ion-icon>
+          <i class="fa-solid fa-book-open-reader"></i>
           </div>
           <h3 class="h3">${i18n.education}</h3>
         </div>
@@ -45,7 +45,7 @@ export default class SectionTimeline {
       <section class="timeline">
         <div class="title-wrapper">
           <div class="icon-box">
-            <ion-icon name="briefcase-outline"></ion-icon>
+          <i class="fa-solid fa-business-time"></i>
           </div>
           <h3 class="h3">${i18n.experience}</h3>
         </div>
