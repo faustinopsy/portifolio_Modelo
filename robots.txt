@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://faustinopsy.github.io/portifolio_Modelo/sitemap.xml

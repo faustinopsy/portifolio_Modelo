@@ -1,0 +1,22 @@
+{
+  "name": "Modelo-portfolio",
+  "short_name": "Modelo-portfolio",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "pt-BR",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+    "fcm_sender_id": "000000000",
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+  
+}
