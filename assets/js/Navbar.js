@@ -15,7 +15,7 @@ export default class Navbar {
     async afterRender(){
         this.sidebar = new Sidebar();
         const sidebar = document.querySelector(".sidebar");
-        const sidebarHTML = this.sidebar.render();
+        const sidebarHTML = await this.sidebar.render();
         sidebar.innerHTML = sidebarHTML;
         this.sidebar.afterRender();
 

@@ -1,27 +1,33 @@
+import FetchData from '../lib/FetchData.js';
+import SocialList from '../lists/SocialList.js';
 export default class SectionSidebarSocial {
-  constructor(social) {
-      this.social = social;
+  constructor() {
+    this.social = [];
+    this.url = './assets/js/json/SocialLinks.json';
   }
 
-  render() {
+  async loadSocial() {
+    this.social = await FetchData.getJSON(this.url);
+  }
+
+  async render() {
+    const socialPromises = this.social.map(sci => {
+        const lista = new SocialList(sci);
+        return lista.render(); 
+    });
+
+    return Promise.all(socialPromises).then(socialElements => {
+        const socialList = socialElements.join('');
+
       return `
       <ul class="social-list">
-      <li class="social-item">
-        <a href="https://facebook.com/yourprofile" class="social-link">
-        <i class="fa-brands fa-facebook"></i>
-        </a>
-      </li>
-      <li class="social-item">
-        <a href="https://twitter.com/yourprofile" class="social-link">
-        <i class="fa-brands fa-twitter"></i>
-        </a>
-      </li>
-      <li class="social-item">
-        <a href="https://instagram.com/yourprofile" class="social-link">
-        <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
+        ${socialList}
       </ul>
       `;
+    });
+  }
+  async renderAsync() {
+    await this.loadSocial();
+    return this.render();
   }
 }

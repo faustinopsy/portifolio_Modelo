@@ -33,15 +33,17 @@ export default class Sidebar {
         }
       });
     }
-  render() {
+  async render() {
     this.loadStyles();
+    const socialListfim = await this.socialList.renderAsync();
+    const contactsListListfim = await this.contactsList.renderAsync();
     return `
       ${this.sidebarInfo.render()}
       <div class="sidebar-info_more">
         <div class="separator"></div>
-        ${this.contactsList.render()}
+        ${contactsListListfim}
         <div class="separator"></div>
-        ${this.socialList.render()}
+        ${socialListfim}
       </div>
     `;
   }    
