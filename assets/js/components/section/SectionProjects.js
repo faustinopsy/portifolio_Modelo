@@ -7,8 +7,17 @@ export default class SectionProjects {
       this.url = './assets/js/json/projects.json';
       this.CustomSelect = new CustomSelect();
     }
+
     async loadProjects() {
-      this.projects = await FetchData.getJSON(this.url);
+      if (urlsJson.urls && urlsJson.urls[5]) {
+        this.projects = urlsJson.urls[5];
+      } else {
+        this.projects = await FetchData.getJSON(this.url);
+        if (!urlsJson.urls) {
+            urlsJson.urls = [];
+        }
+        urlsJson.urls[5] = this.projects;
+      }
     }
     render() {
       let card;

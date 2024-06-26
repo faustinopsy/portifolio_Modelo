@@ -7,7 +7,15 @@ export default class SectionSkill {
   }
 
   async loadSkill() {
-    this.skill = await FetchData.getJSON(this.url);
+    if (urlsJson.urls && urlsJson.urls[7]) {
+      this.skill = urlsJson.urls[7];
+    } else {
+      this.skill = await FetchData.getJSON(this.url);
+      if (!urlsJson.urls) {
+          urlsJson.urls = [];
+      }
+      urlsJson.urls[7] = this.skill;
+    }
   }
 
   async render() {

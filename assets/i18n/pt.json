@@ -1,13 +1,13 @@
 {
     "settingsTitle": "Configurações do Tema",
-    "primaryColor": "Cor Primária",
+    "primaryColor": "Cor Bordas",
     "fontFamily": "Fonte",
     "fontSize": "Tamanho da Fonte",
     "backgroundColor": "Cor de Fundo",
     "backgroundPanelColor": "Cor de Fundo do Painel",
     "shadowIntensity": "Intensidade da Sombra",
     "applyButton": "Aplicar",
-    "settingsButton": "Configurações",
+    "settingsButton": "",
     "education": "Educação",
     "experience": "Experiência",
     "links": {

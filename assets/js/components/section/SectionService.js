@@ -7,7 +7,15 @@ export default class SectionService {
       }
     
       async loadServices() {
-        this.services = await FetchData.getJSON(this.url);
+        if (urlsJson.urls && urlsJson.urls[6]) {
+          this.services = urlsJson.urls[6];
+        } else {
+          this.services = await FetchData.getJSON(this.url);
+          if (!urlsJson.urls) {
+              urlsJson.urls = [];
+          }
+          urlsJson.urls[6] = this.services;
+        }
       }
       async render() {
         const servicesPromises = this.services.map(post => {

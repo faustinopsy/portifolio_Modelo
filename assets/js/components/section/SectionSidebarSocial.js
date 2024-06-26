@@ -7,9 +7,16 @@ export default class SectionSidebarSocial {
   }
 
   async loadSocial() {
-    this.social = await FetchData.getJSON(this.url);
+    if (urlsJson.urls && urlsJson.urls[8]) {
+      this.social = urlsJson.urls[8];
+    } else {
+      this.social = await FetchData.getJSON(this.url);
+      if (!urlsJson.urls) {
+          urlsJson.urls = [];
+      }
+      urlsJson.urls[8] = this.social;
+    }
   }
-
   async render() {
     const socialPromises = this.social.map(sci => {
         const lista = new SocialList(sci);

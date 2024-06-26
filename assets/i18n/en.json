@@ -1,13 +1,13 @@
 {
   "settingsTitle": "Theme Settings",
-  "primaryColor": "Primary Color",
+  "primaryColor": "Primary Border",
   "fontFamily": "Font",
   "fontSize": "Font Size",
   "backgroundColor": "Background Color",
   "backgroundPanelColor": "Panel Background Color",
   "shadowIntensity": "Shadow Intensity",
   "applyButton": "Apply",
-  "settingsButton": "Settings",
+  "settingsButton": "",
   "education": "Education",
   "experience": "Experience",
   "links": {

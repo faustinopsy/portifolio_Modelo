@@ -37,7 +37,7 @@ export default class Configuracoes {
   }
 
   render() {
-    const buttonHtml = `<button id="config-btn"></button>`;
+    const buttonHtml = `</button><img src='assets/images/config.svg'  id="config-btn">`;
     const modalHtml = `
       <div id="config-modal" class="modal-container" hidden>
         <div class="overlay"></div>

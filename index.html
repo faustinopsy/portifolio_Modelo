@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'none';
-    script-src 'self' ;
+    script-src 'self' 'unsafe-inline';
     img-src 'self' data: ;
     style-src 'self' 'unsafe-inline';
     font-src 'self' ;
@@ -20,12 +20,36 @@
     upgrade-insecure-requests;
     ">
   <title>vCard - Personal Portfolio</title>
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/app.css">
-  <link rel="stylesheet" href="./assets/fontawesome/css/all.css" >
+  <link async rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link async rel="stylesheet" href="./assets/css/app.css">
   <meta name="theme-color" content="#000000">
 	<link rel="manifest" href="./manifest.json">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <Script>
+    const worker = new Worker('./worker.js');
+    window.workX = worker
+    workX.postMessage({ type: 'fetchData' });
+    
+    async function registerService() {
+      if ("serviceWorker" in navigator) {
+          try {
+              const registration = await navigator.serviceWorker.register("/sw.js", {
+                  scope: "/",
+              });
+              if (registration.installing) {
+                  console.log("Service worker instalando");
+              } else if (registration.waiting) {
+                  console.log("Service worker instalado");
+              } else if (registration.active) {
+                  console.log("Service worker ativo");
+              }
+          } catch (error) {
+              console.error(`Falhou em registrar em ${error}`);
+          }
+      }
+  }
+  registerService()
+  </Script>
 </head>
 
 <body>
@@ -48,8 +72,8 @@
 
   </main>
 
-  <script type="module" src="./assets/js/Configuracoes.js" ></script>
-  <script type="module" src="./assets/js/App.js" ></script>
+  <script defer type="module" src="./assets/js/Configuracoes.js" ></script>
+  <script assync type="module" src="./assets/js/App.js" ></script>
 </body>
 
 </html>

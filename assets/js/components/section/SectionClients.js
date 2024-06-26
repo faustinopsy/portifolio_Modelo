@@ -8,9 +8,16 @@ export default class SectionClients {
   }
 
   async loadClients() {
-    this.clients = await FetchData.getJSON(this.url);
+    if (urlsJson.urls && urlsJson.urls[1]) {
+      this.clients = urlsJson.urls[1];
+    } else {
+      this.clients = await FetchData.getJSON(this.url);
+      if (!urlsJson.urls) {
+          urlsJson.urls = [];
+      }
+      urlsJson.urls[1] = this.clients;
+    }
   }
-
   async render() {
     const clientPromises = this.clients.map(post => {
         const lista = new ClientsList(post);

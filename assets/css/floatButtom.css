@@ -1,7 +1,7 @@
 #config-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    right: 10px;
     z-index: 30;
     padding: 10px 15px;
     background-color: var(--onyx);
@@ -10,5 +10,10 @@
     border-radius: 5px;
     cursor: pointer;
     opacity: 0.7;
+    width: 50px;
   }
-  
+  #config-btn:hover{
+    zoom: 1.1;
+    background-color: chocolate;
+  }
+ 

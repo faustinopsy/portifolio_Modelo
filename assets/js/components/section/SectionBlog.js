@@ -9,9 +9,16 @@ export default class SectionBlog {
   }
 
   async loadPosts() {
-    this.blogPosts = await FetchData.getJSON(this.url);
+    if (urlsJson.urls && urlsJson.urls[0]) {
+      this.blogPosts = urlsJson.urls[0];
+    } else {
+      this.blogPosts = await FetchData.getJSON(this.url);
+      if (!urlsJson.urls) {
+          urlsJson.urls = [];
+      }
+      urlsJson.urls[0] = this.blogPosts;
+    }
   }
-
   render() {
     let card;
     const blogPostItems = this.blogPosts.map(post => {

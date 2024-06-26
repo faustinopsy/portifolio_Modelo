@@ -7,9 +7,16 @@ export default class SectionTestimonials {
       }
     
       async loadTestimon() {
-        this.testimonials = await FetchData.getJSON(this.url);
+        if (urlsJson.urls && urlsJson.urls[9]) {
+          this.testimonials = urlsJson.urls[9];
+        } else {
+          this.testimonials = await FetchData.getJSON(this.url);
+          if (!urlsJson.urls) {
+              urlsJson.urls = [];
+          }
+          urlsJson.urls[9] = this.testimonials;
+        }
       }
-
       async render() {
         const testPromises = this.testimonials.map(test => {
             const lista = new TestimonialsList(test);

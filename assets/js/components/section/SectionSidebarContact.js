@@ -7,9 +7,16 @@ export default class SectionSidebarContact {
   }
 
   async loadContact() {
-    this.Contact = await FetchData.getJSON(this.url);
+    if (urlsJson.urls && urlsJson.urls[2]) {
+      this.Contact = urlsJson.urls[2];
+    } else {
+      this.Contact = await FetchData.getJSON(this.url);
+      if (!urlsJson.urls) {
+          urlsJson.urls = [];
+      }
+      urlsJson.urls[2] = this.Contact;
+    }
   }
-
   async render() {
     const ContactPromises = this.Contact.map(sci => {
         const lista = new ContactList(sci);
