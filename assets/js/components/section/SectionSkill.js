@@ -7,7 +7,7 @@ export default class SectionSkill {
   }
 
   async loadSkill() {
-    if (urlsJson.urls && urlsJson.urls[7]) {
+    if (urlsJson.urls[7]) {
       this.skill = urlsJson.urls[7];
     } else {
       this.skill = await FetchData.getJSON(this.url);

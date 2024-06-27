@@ -26,10 +26,20 @@
 	<link rel="manifest" href="./manifest.json">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <Script>
-    const worker = new Worker('./worker.js');
-    window.workX = worker
-    workX.postMessage({ type: 'fetchData' });
-    
+  const worker = new Worker('./worker.js');
+  window.workX = worker
+  workX.postMessage({ type: 'fetchData' });
+  window.urlsJson = []
+  workX.addEventListener('message', async (event) => {
+            const { type, data, error } = event.data;
+            if (type === 'dadosJson') {
+              if (data) {
+                urlsJson = await data
+              }
+            } else if (type === 'error') {
+              console.error('Erro ao buscar estruturas:', error);
+            }
+    });
     async function registerService() {
       if ("serviceWorker" in navigator) {
           try {
@@ -49,6 +59,7 @@
       }
   }
   registerService()
+
   </Script>
 </head>
 

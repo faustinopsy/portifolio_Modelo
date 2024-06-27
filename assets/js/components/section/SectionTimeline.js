@@ -12,7 +12,7 @@ export default class SectionTimeline {
   }
 
   async loadXP() {
-    if (urlsJson.urls && urlsJson.urls[4]) {
+    if (urlsJson.urls[4]) {
       this.experience = urlsJson.urls[4];
     } else {
       this.experience = await FetchData.getJSON(this.urlXp);
@@ -23,7 +23,7 @@ export default class SectionTimeline {
     }
   }
   async loadEdu() {
-    if (urlsJson.urls && urlsJson.urls[3]) {
+    if (urlsJson.urls[3]) {
       this.education = urlsJson.urls[3];
     } else {
       this.education = await FetchData.getJSON(this.urlEdu);

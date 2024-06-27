@@ -1,5 +1,5 @@
 import Navbar from './Navbar.js';
-window.urlsJson = []
+
 class App{
     constructor(){
         this.Navbar = new Navbar();
@@ -12,16 +12,6 @@ class App{
         this.Navbar.afterRender();
         this.Navbar.navigator();
 
-        workX.addEventListener('message', async (event) => {
-            const { type, data, error } = event.data;
-            if (type === 'dadosJson') {
-              if (data) {
-                urlsJson = data
-              }
-            } else if (type === 'error') {
-              console.error('Erro ao buscar estruturas:', error);
-            }
-          });
     }
     
 }
