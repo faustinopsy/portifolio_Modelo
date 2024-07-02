@@ -4,9 +4,10 @@ export default class Card {
     }
 
     render() {
+        const TextLimited = this.postData.text.length > 100 ? this.postData.text.substring(0, 100) + '...' : this.postData.text;
         return `
             <li class="blog-post-item">
-                <a href="#">
+                <a href="#post/${this.postData.id}" data-id="${this.postData.id}">
                     <figure class="blog-banner-box">
                         <img src="${this.postData.imageSrc}" alt="${this.postData.alt}" loading="lazy">
                     </figure>
@@ -18,7 +19,7 @@ export default class Card {
                         </div>
                         <h3 class="h3 blog-item-title">${this.postData.title}</h3>
                         <p class="blog-text">
-                            ${this.postData.text}
+                            ${TextLimited}
                         </p>
                     </div>
                 </a>
