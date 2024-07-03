@@ -7,14 +7,14 @@ export default class SectionTestimonials {
       }
     
       async loadTestimon() {
-        if (urlsJson.urls && urlsJson.urls[9]) {
-          this.testimonials = urlsJson.urls[9];
+        if (urlsJson.urls && urlsJson.urls[8]) {
+          this.testimonials = urlsJson.urls[8];
         } else {
           this.testimonials = await FetchData.getJSON(this.url);
           if (!urlsJson.urls) {
               urlsJson.urls = [];
           }
-          urlsJson.urls[9] = this.testimonials;
+          urlsJson.urls[8] = this.testimonials;
         }
       }
       async render() {

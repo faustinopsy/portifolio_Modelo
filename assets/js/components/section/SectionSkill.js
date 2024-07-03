@@ -7,14 +7,14 @@ export default class SectionSkill {
   }
 
   async loadSkill() {
-    if (urlsJson.urls[7]) {
-      this.skill = urlsJson.urls[7];
+    if (urlsJson.urls[6]) {
+      this.skill = urlsJson.urls[6];
     } else {
       this.skill = await FetchData.getJSON(this.url);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[7] = this.skill;
+      urlsJson.urls[6] = this.skill;
     }
   }
 

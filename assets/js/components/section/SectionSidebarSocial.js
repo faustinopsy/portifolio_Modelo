@@ -7,14 +7,14 @@ export default class SectionSidebarSocial {
   }
 
   async loadSocial() {
-    if (urlsJson.urls && urlsJson.urls[8]) {
-      this.social = urlsJson.urls[8];
+    if (urlsJson.urls && urlsJson.urls[7]) {
+      this.social = urlsJson.urls[7];
     } else {
       this.social = await FetchData.getJSON(this.url);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[8] = this.social;
+      urlsJson.urls[7] = this.social;
     }
   }
   async render() {

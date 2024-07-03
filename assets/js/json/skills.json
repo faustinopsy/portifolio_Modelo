@@ -1,21 +1,32 @@
  [
     {
-      "name": "Web design",
+      "name": "Frontend",
+      "text":"HTML5 e CSS3, JavaScript",
       "percentage": 80,
       "progressBarWidth": "80%"
     },
     {
-      "name": "Graphic design",
+      "name": "Backend",
+      "text":"PHP, Python, Java",
       "percentage": 70,
       "progressBarWidth": "70%"
     },
     {
-      "name": "Branding",
+      "name": "Banco de dados",
+      "text":"MySQL/MariaDB, PostgreSQLe SQLServer, SQLiten",
       "percentage": 90,
       "progressBarWidth": "90%"
     },
     {
-      "name": "WordPress",
+      "name": "API",
+      "text":"JSON e XML",
+      "percentage": 50,
+      "progressBarWidth": "50%"
+    }
+    ,
+    {
+      "name": "Frameworks",
+      "text":"Conhecimento em Laravel, CodeIgniter e Vuejs, low code PHPmaker e scriptcase",
       "percentage": 50,
       "progressBarWidth": "50%"
     }

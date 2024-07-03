@@ -9,14 +9,14 @@ export default class SectionProjects {
     }
 
     async loadProjects() {
-      if (urlsJson.urls && urlsJson.urls[5]) {
-        this.projects = urlsJson.urls[5];
+      if (urlsJson.urls && urlsJson.urls[4]) {
+        this.projects = urlsJson.urls[4];
       } else {
         this.projects = await FetchData.getJSON(this.url);
         if (!urlsJson.urls) {
             urlsJson.urls = [];
         }
-        urlsJson.urls[5] = this.projects;
+        urlsJson.urls[4] = this.projects;
       }
     }
     render() {

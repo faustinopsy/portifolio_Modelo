@@ -29,6 +29,8 @@ export default class Navbar {
                 location.hash = targetHash;
             });
         });
+
+        this.prefetchModules();
     }
 
     render() {
@@ -44,7 +46,22 @@ export default class Navbar {
                 ${navLinksHtml}
             </ul>
         `;
+    }
 
+    async prefetchModules() {
+        for (const menuItem of this.menu) {
+            if (menuItem.componentPath) {
+                try {
+                    import(menuItem.componentPath).then(module => {
+                        //console.log(`Prefetched ${menuItem.componentPath}`);
+                    }).catch(error => {
+                        //console.error(`Failed to prefetch ${menuItem.componentPath}:`, error);
+                    });
+                } catch (error) {
+                    //console.error(`Failed to prefetch ${menuItem.componentPath}:`, error);
+                }
+            }
+        }
     }
 
     async updatePageContent(hash) {
@@ -54,7 +71,7 @@ export default class Navbar {
         } else {
             const menuItem = this.menu.find(item => item.hash === hash);
 
-            if (menuItem && menuItem.componentPath) {
+            if (menuItem.componentPath) {
                 try {
                     const module = await import(menuItem.componentPath);
                     const ComponentClass = module.default;
@@ -77,13 +94,16 @@ export default class Navbar {
 
     async loadPostContent(postId) {
         let post;
-        if (urlsJson.urls && urlsJson.urls[0]) {
-            post = urlsJson.urls[0].find(p => p.id == postId);
+        if (urlsJson.urls) {
+            post = urlsJson.urls.find(p => p.id == postId);
         } else {
-            const posts = await FetchData.getJSON('./assets/js/json/blogPosts.json');
-            post = posts.find(p => p.id == postId);
+            const posts = await FetchData.getJSON('./assets/js/json/blogsIndex.json');
+            const postUrls = posts.map(id => `/assets/js/json/blog/${id}.json`);
+            const postPromises = postUrls.map(url => FetchData.getJSON(url));
+            const allPosts = await Promise.all(postPromises);
+            post = allPosts.find(p => p.id == postId);
         }
-    
+
         if (post) {
             const pageContent = document.querySelector('.blog'); 
             pageContent.innerHTML = `
@@ -109,12 +129,11 @@ export default class Navbar {
             console.error('Post not found');
         }
     }
-    
 
     navigator(url = '') {
         const defaultUrl = location.hash ? location.hash : '#about';
         const hash = url.substring(1) || defaultUrl.substring(1);
-    
+
         if (hash.startsWith('post/')) {
             const postId = hash.split('/')[1];
             this.loadPostContent(postId);
@@ -123,13 +142,12 @@ export default class Navbar {
             this.updateActiveLink(hash);
         }
     }
-    
 
     updateActiveLink(hash) {
         const navigationLinks = document.querySelectorAll("[data-nav-link]");
         const pages = document.querySelectorAll("[data-page]");
         navigationLinks.forEach(link => {
-            if (link.textContent.trim().toLowerCase() == hash) {
+            if (link.getAttribute('data-target') === hash) {
                 link.classList.add("active");
             } else {
                 link.classList.remove("active");

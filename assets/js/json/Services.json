@@ -16,11 +16,5 @@
         "description": "Professional development of applications for iOS and Android.",
         "imageSrc": "./assets/images/icon-app.svg",
         "altText": "mobile app icon"
-    },
-    {
-        "title": "Photography",
-        "description": "I make high-quality photos of any category at a professional level.",
-        "imageSrc": "./assets/images/icon-photo.svg",
-        "altText": "camera icon"
     }
 ]

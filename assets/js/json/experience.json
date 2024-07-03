@@ -1,19 +1,19 @@
 [
   
     {
-      "title": "Creative director",
-      "duration": "2015 — Present",
-      "description": "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
+      "title": "Professor de Desenvolvimeto Web",
+      "duration": "2023 — Present",
+      "description": "Tópicos Iniciais do desenvolvimento Web I (Frontend), Tópicos Intermediários do desenvolvimento Web II (Backend), Tópicos Avançados do desenvolvimento Web III (Backend III)."
     },
     {
-      "title": "Art director",
-      "duration": "2013 — 2015",
-      "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+      "title": "Analista Desenvolvedor",
+      "duration": "2022 — 2023",
+      "description": "Desenvolvimento e manunteção de sistemas web com PHP e seus Frameworks Laravel e CodeIgnite, Javascript e Vue, e PostgreSQL, integrações Rest e Soap. junto com outros desenvolvedores criavamos integrações entre sistemas diversos de vários estados com os respectivos detrans, onde financeiras vendiam carros, mas o registro no detran precisa passar por um empresa credenciada pelo contran, e todos os sistemas de financeiras e bancos trasmitem seus dados de formas variadas e a integração com as API dos detrans de cada estado era fundamental."
     },
     {
-      "title": "Web designer",
-      "duration": "2010 — 2013",
-      "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+      "title": "Desenvolvedor Full Stack",
+      "duration": "2010 — 2022",
+      "description": "Desenvolvimento e manunteção de aplicações web com PHP, Javascript e MySQL, SQLServer. Desenvolvi sozinho Alguns sistemas na PMESP, como o sistema SISMEN (sistema de saúde mental) Sistema de Gestão de Relacionamento com o Cliente (CRM), também automatização do software de Inteligência para gerenciamento de crises baseado em mutiusuário e geolocalização de ocorrências este último algumas outras pessoas contribuiram, mas existem outros que são internos da área de inteligência policial."
     }
   ]
 

@@ -7,14 +7,14 @@ export default class SectionSidebarContact {
   }
 
   async loadContact() {
-    if (urlsJson.urls && urlsJson.urls[2]) {
-      this.Contact = urlsJson.urls[2];
+    if (urlsJson.urls && urlsJson.urls[1]) {
+      this.Contact = urlsJson.urls[1];
     } else {
       this.Contact = await FetchData.getJSON(this.url);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[2] = this.Contact;
+      urlsJson.urls[1] = this.Contact;
     }
   }
   async render() {

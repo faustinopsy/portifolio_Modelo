@@ -6,7 +6,7 @@ export default class ProjectList {
     render() {
         return `
             <li class="project-item active" data-filter-item data-category="${this.project.category}">
-                <a href="#">
+                <a href="${this.project.link}" target="blank">
                     <figure class="project-img">
                         <div class="project-item-icon-box">
                         <i class="fa-regular fa-eye"></i>

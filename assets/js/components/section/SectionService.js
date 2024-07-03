@@ -7,14 +7,14 @@ export default class SectionService {
       }
     
       async loadServices() {
-        if (urlsJson.urls && urlsJson.urls[6]) {
-          this.services = urlsJson.urls[6];
+        if (urlsJson.urls && urlsJson.urls[5]) {
+          this.services = urlsJson.urls[5];
         } else {
           this.services = await FetchData.getJSON(this.url);
           if (!urlsJson.urls) {
               urlsJson.urls = [];
           }
-          urlsJson.urls[6] = this.services;
+          urlsJson.urls[5] = this.services;
         }
       }
       async render() {

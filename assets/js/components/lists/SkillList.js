@@ -7,11 +7,10 @@ export default class SkillList {
     return `
       <li class="skills-item">
         <div class="title-wrapper">
-          <h5 class="h5">${this.skillsData.name}</h5>
-          <data value="${this.skillsData.percentage}">${this.skillsData.percentage}</data>
+          <h4 class="h4">${this.skillsData.name}</h4>
         </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: ${this.skillsData.progressBarWidth}"></div>
+        <div class="timeline-list">
+         <span>${this.skillsData.text}</span>
         </div>
     </li>
     `;

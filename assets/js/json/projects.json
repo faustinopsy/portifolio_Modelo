@@ -1,56 +1,86 @@
 [
   {
-    "title": "Finance",
+    "title": "RPG Pixel",
     "imageSrc": "./assets/images/project-1.jpg",
     "altText": "finance",
-    "category": "Web development"
+    "category": "Web development",
+    "link": "https://pixelrpg.faustinopsy.com/"
   },
   {
-    "title": "Orizon",
+    "title": "Jogo da combinação",
     "imageSrc": "./assets/images/project-2.png",
     "altText": "orizon",
-    "category": "Web development"
+    "category": "Web development",
+    "link": "https://cadeado.ceuvago.com/"
   },
   {
-    "title": "Fundo",
+   "title": "Jogo de carros",
     "imageSrc": "./assets/images/project-3.jpg",
     "altText": "fundo",
-    "category": "Web design"
+    "category": "Web design",
+    "link": "https://corrida.faustinopsy.com/"
   },
   {
-    "title": "Brawlhalla",
+    "title": "Lotofácil conferidor",  
     "imageSrc": "./assets/images/project-4.png",
     "altText": "brawlhalla",
-    "category": "Applications"
+    "category": "Applications",
+    "link": "https://lotofacil.ceuvago.com"
   },
   {
-    "title": "DSM.",
+    "title": "Gerador de Código",
     "imageSrc": "./assets/images/project-5.png",
     "altText": "dsm",
-    "category": "Web design"
+    "category": "Web design",
+    "link": "https://phpcrud.ceuvago.com/"
   },
   {
-    "title": "MetaSpark",
+    "title": "Reconhecimento facial",
     "imageSrc": "./assets/images/project-6.png",
     "altText": "metaspark",
-    "category": "Web design"
+    "category": "Web design",
+    "link": "https://face.ceuvago.com/"
   },
   {
-    "title": "Summary",
+    "title": "Procura Desaparecidos",
     "imageSrc": "./assets/images/project-7.png",
     "altText": "summary",
-    "category": "Web development"
+    "category": "Web development",
+    "link": "https://desaparecidos.ceuvago.com/"
   },
   {
-    "title": "Task Manager",
+    "title": "Criador de provas online",
     "imageSrc": "./assets/images/project-8.jpg",
     "altText": "task manager",
-    "category": "Applications"
+    "category": "Applications",
+    "link": "https://apps.rodrigofaustino.com.br/provasnovas/login.php"
   },
   {
-    "title": "Arrival",
+   "title": "Mapas interativos",
     "imageSrc": "./assets/images/project-9.png",
     "altText": "arrival",
-    "category": "Web development"
+    "category": "Web development",
+    "link": "https://mapadocrime.ceuvago.com/"
+  },
+  {
+   "title": "Jogo Online MultJogador",
+    "imageSrc": "./assets/images/project-9.png",
+    "altText": "arrival",
+    "category": "Web development",
+    "link": "https://ppt.ceuvago.com/"
+  },
+  {
+   "title": "Jogo Trade tipo forex",
+    "imageSrc": "./assets/images/project-9.png",
+    "altText": "arrival",
+    "category": "Web development",
+    "link": "https://simulatrade.ceuvago.com/"
+  },
+  {
+   "title": "CF - Controle Financeiro",
+    "imageSrc": "./assets/images/project-9.png",
+    "altText": "arrival",
+    "category": "Web development",
+     "link": "https://banco.ceuvago.com/"
   }
 ]

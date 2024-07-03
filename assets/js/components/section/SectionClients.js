@@ -8,14 +8,14 @@ export default class SectionClients {
   }
 
   async loadClients() {
-    if (urlsJson.urls && urlsJson.urls[1]) {
-      this.clients = urlsJson.urls[1];
+    if (urlsJson.urls && urlsJson.urls[0]) {
+      this.clients = urlsJson.urls[0];
     } else {
       this.clients = await FetchData.getJSON(this.url);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[1] = this.clients;
+      urlsJson.urls[0] = this.clients;
     }
   }
   async render() {

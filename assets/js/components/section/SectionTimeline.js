@@ -12,25 +12,25 @@ export default class SectionTimeline {
   }
 
   async loadXP() {
-    if (urlsJson.urls[4]) {
-      this.experience = urlsJson.urls[4];
+    if (urlsJson.urls[3]) {
+      this.experience = urlsJson.urls[3];
     } else {
       this.experience = await FetchData.getJSON(this.urlXp);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[4] = this.experience;
+      urlsJson.urls[3] = this.experience;
     }
   }
   async loadEdu() {
-    if (urlsJson.urls[3]) {
-      this.education = urlsJson.urls[3];
+    if (urlsJson.urls[2]) {
+      this.education = urlsJson.urls[2];
     } else {
       this.education = await FetchData.getJSON(this.urlEdu);
       if (!urlsJson.urls) {
           urlsJson.urls = [];
       }
-      urlsJson.urls[3] = this.education;
+      urlsJson.urls[2] = this.education;
     }
   }
 
