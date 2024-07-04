@@ -1,9 +1,9 @@
 {
     "id": 6,
     "imageSrc": "./assets/images/blog-6.jpg",
-    "imageAlt": "Design digest #79",
+    "imageAlt": "Machine learning #79",
     "category": "Design",
     "date": "2022-02-23",
-    "title": "Design digest #79",
-    "text": "Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum."
+    "title": "Machine learning #79",
+    "text": "Machine learning é uma área da computação que se baseia em algoritmos e técnicas de aprendizado de máquina para criar modelos que podem realizar tarefas sem que sejam explicitamente programadas.<br>O machine learning é uma área da computação que se baseia em algoritmos e técnicas de aprendizado de máquina para criar modelos que podem realizar tarefas sem que sejam explicitamente programadas. Esses modelos são treinados com dados e, a partir deles, são capazes de fazer previsões ou tomar decisões baseadas em padrões e tendências encontrados nos dados.<br><br>O PHP é uma linguagem de programação amplamente utilizada para desenvolvimento de aplicações web e pode ser utilizada também para implementar algoritmos de machine learning. Existem diversas bibliotecas e frameworks PHP que oferecem suporte para machine learning, alguns exemplos incluem o PHP-ML, o TensorFlow PHP e o Deeplearning4PHP.<br><br>A utilização do PHP para machine learning é uma opção interessante para projetos que precisam de integração com outras aplicações web, como por exemplo, um sistema de recomendação de produtos em uma loja virtual. Neste caso, o PHP pode ser utilizado para coletar os dados de compra dos usuários, treinar um modelo de machine learning com esses dados e, em seguida, fazer previsões sobre quais produtos o usuário pode estar interessado em comprar no futuro.<br>Outra possibilidade de uso do PHP para machine learning é a criação de aplicações de análise de dados. Por exemplo, um sistema que coleta dados de vendas de uma loja e exibe gráficos e relatórios com informações importantes sobre o desempenho da loja. Neste caso, o PHP pode ser utilizado para coletar os dados das vendas, armazená-los em um banco de dados e exibir os relatórios e gráficos utilizando bibliotecas de visual"
   }
